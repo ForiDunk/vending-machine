@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom';
 import ProductsList from './containers/ProductsList/ProductsList';
 import Wrapper from './hoc/Wrapper/Wrapper';
 import './index.css';
+import reducer from './store/reducers/reducer';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 const app = (
-  <Wrapper>
-    <ProductsList />
-  </Wrapper>
+  <Provider store={store}>
+    <Wrapper>
+      <ProductsList />
+    </Wrapper>
+  </Provider>
 );
 
 ReactDOM.render(app, document.getElementById('root'));
