@@ -1,4 +1,5 @@
 import * as constants from '../constants';
+import products from '../products';
 
 const initialState = {
   products: [],
@@ -8,7 +9,10 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case constants.GET_PRODUCTS:
-      return state;
+      return {
+        ...state,
+        products
+      };
     default: 
       return state;
   }

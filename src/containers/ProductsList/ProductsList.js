@@ -7,21 +7,21 @@ class ProductsList extends Component {
 
   componentDidMount() {
     this.props.getProducts();
-    console.log(this.props);
   }
   render() {
     return (
-      <div className={styles.productsList}>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <div>Product</div>
-        <hr />
+      <div className={styles.container}>
+        <div className={styles.productsList}>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+          <div className={styles.product}>Product</div>
+        </div>
         <div>ProductBought</div>
       </div>
     );

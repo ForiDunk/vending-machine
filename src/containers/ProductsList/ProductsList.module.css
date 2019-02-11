@@ -1,11 +1,20 @@
-.productsList {
+.container {
   border: 1px solid black;
-  height: 50%;
-  width: 50%;
-  min-width: 320px;
-  min-height: 320px;
+  text-align: center;
 }
 
-hr {
-  border-color: black;
+.productsList {
+  border: 1px solid black;
+  margin: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.product {
+  width: 30%;
+  height: 75px;
+  border: 1px solid black;
+  margin: 5px 0;
 }
