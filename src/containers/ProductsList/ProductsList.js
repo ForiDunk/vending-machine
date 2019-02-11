@@ -11,7 +11,19 @@ class ProductsList extends Component {
   }
   render() {
     return (
-      <div className={styles.productsList}>ProductsList</div>
+      <div className={styles.productsList}>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <div>Product</div>
+        <hr />
+        <div>ProductBought</div>
+      </div>
     );
   }
 }

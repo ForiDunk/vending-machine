@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ProductsList from './containers/ProductsList/ProductsList';
 import Wrapper from './hoc/Wrapper/Wrapper';
+import Board from './containers/Board/Board';
 import './index.css';
 import reducer from './store/reducers/reducer';
 import { Provider } from 'react-redux';
@@ -14,6 +15,7 @@ const app = (
   <Provider store={store}>
     <Wrapper>
       <ProductsList />
+      <Board />
     </Wrapper>
   </Provider>
 );
