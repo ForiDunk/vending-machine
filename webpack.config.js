@@ -17,12 +17,28 @@ module.exports = {
             loader: 'html-loader'
           }
         ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: "[local]___[hash:base64:5]"
+            }
+          }
+        ]
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
       filename: './index.html'
     })
   ]
