@@ -12,7 +12,7 @@ class ProductsList extends Component {
   render() {
 
     const { products } = this.props;
-    const product = products.map(product => <Product key={product.code} />);
+    const product = products.map(product => <Product product={product} key={product.code} />);
 
     return (
       <div className={styles.container}>
