@@ -1,54 +1,54 @@
 const products = [
   {
-    name: 'Product1',
+    name: 'Cocktail',
     price: 1,
     quantity: 5,
     code: 1
   },
   {
-    name: 'Product2',
+    name: 'Coffee',
     price: 1,
     quantity: 5,
     code: 2
   },
   {
-    name: 'Product3',
+    name: 'E. Drink',
     price: 1,
     quantity: 5,
     code: 3
   },
   {
-    name: 'Product4',
+    name: 'Green Tea',
     price: 1,
     quantity: 5,
     code: 4
   },
   {
-    name: 'Product5',
+    name: 'Iced Tea',
     price: 1,
     quantity: 5,
     code: 5
   },
   {
-    name: 'Product6',
+    name: 'Juice',
     price: 1,
     quantity: 5,
     code: 6
   },
   {
-    name: 'Product7',
+    name: 'Lemon Tea',
     price: 1,
     quantity: 5,
     code: 7
   },
   {
-    name: 'Product8',
+    name: 'Margarita',
     price: 1,
     quantity: 5,
     code: 8
   },
   {
-    name: 'Product9',
+    name: 'Milk',
     price: 1,
     quantity: 5,
     code: 9

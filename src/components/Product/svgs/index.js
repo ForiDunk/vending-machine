@@ -1,6 +1,6 @@
 import Beer from './beer.svg';
 import Cocktail from './cocktail.svg';
-import CoffeeCupup from './coffee-cup.svg';
+import CoffeeCup from './coffee-cup.svg';
 import EnergyDrink from './energy-drink.svg';
 import GreenTea from './green-tea.svg';
 import IceTea from './iced-tea.svg';
@@ -21,6 +21,6 @@ import Vodka from './vodka.svg';
 import Wine from './wine.svg';
 
 export default [
-  Beer, Cocktail, CoffeeCupup, EnergyDrink, GreenTea, IceTea, Juice, LemonTea, Margarita, MilkBottle,
+  Beer, Cocktail, CoffeeCup, EnergyDrink, GreenTea, IceTea, Juice, LemonTea, Margarita, MilkBottle,
   Milk, MineralWater, Mojito, RootBeer, Smoothie, SoftDrink, SoyMilk, Soya, Tea, Vodka, Wine
 ];

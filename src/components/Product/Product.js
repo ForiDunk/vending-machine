@@ -7,6 +7,7 @@ const product = ({ product, image }) => {
     <div className={styles.product}>
       <Image width={50} height={50} />
       <p className={styles.product__code}>{product.code}</p>
+      <p className={styles.product__name}>{product.name}</p>
       <div className={styles.product__quantity}>X{product.quantity}</div>
     </div>
   );
