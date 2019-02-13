@@ -11,10 +11,3 @@
   justify-content: space-evenly;
   align-items: center;
 }
-
-.product {
-  width: 30%;
-  height: 75px;
-  border: 1px solid black;
-  margin: 5px 0;
-}
