@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/actions';
 import styles from './ProductsList.module.css';
 import Product from '../../components/Product/Product';
+import drinks from '../../components/Product/svgs';
 
 class ProductsList extends Component {
 
@@ -10,9 +11,8 @@ class ProductsList extends Component {
     this.props.getProducts();
   }
   render() {
-
     const { products } = this.props;
-    const product = products.map(product => <Product product={product} key={product.code} />);
+    const product = products.map(product => <Product product={product} key={product.code} image={drinks[product.code]} />);
 
     return (
       <div className={styles.container}>
