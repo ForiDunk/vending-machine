@@ -36,6 +36,9 @@ module.exports = {
       }
     ]
   },
+  output: {
+    path: __dirname + '/build'
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
