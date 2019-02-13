@@ -1,0 +1,10 @@
+.display {
+  background-color: #87cefa;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.display__text {
+  margin: 0;
+}
