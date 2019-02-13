@@ -1,6 +1,11 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
+  entry: {
+    main: path.resolve(__dirname, 'src/index.js'),
+    Icon: path.resolve(__dirname, 'src/components/Product/svgs/index.js')
+  },
   module: {
     rules: [
       {
@@ -51,7 +56,13 @@ module.exports = {
     ]
   },
   output: {
-    path: __dirname + '/build'
+    path: __dirname + '/build',
+    filename: '[name].[contenthash].js',
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

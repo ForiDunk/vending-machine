@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build": "webpack --node production"
+    "build": "rimraf build && webpack --mode production"
   },
   "repository": {
     "type": "git",
