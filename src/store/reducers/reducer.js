@@ -11,7 +11,7 @@ const initialState = {
 const handleSelectProduct = (keyValue, state) => {
   let selected = {};
   state.products.map(product => {
-    if (product.code === keyValue) {
+    if (product.code === keyValue && state.balance >= 0.5) {
       selected = product;
     }
     if (keyValue === 'Clear') {

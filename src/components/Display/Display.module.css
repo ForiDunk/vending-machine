@@ -11,3 +11,7 @@
   margin: 0;
   font-family: monospace;
 }
+
+.display__text {
+  font-weight: bold;
+}

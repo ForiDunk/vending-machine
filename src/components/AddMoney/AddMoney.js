@@ -8,7 +8,7 @@ import SilverCoin from './silverCoin.svg';
 const addMoney = ({ addCoin }) => (
   <div className={styles.addMoney}>
     <GoldCoin onClick={() => addCoin(1)} className={styles.addMoney__coin} />
-    <SilverCoin onClick={() => addCoin(0.50)} className={styles.addMoney__coin} />
+    <SilverCoin onClick={() => addCoin(0.5)} className={styles.addMoney__coin} />
   </div>
 );
 
