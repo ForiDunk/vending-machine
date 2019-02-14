@@ -9,4 +9,5 @@
 .display__text,
 .display__money {
   margin: 0;
+  font-family: monospace;
 }
