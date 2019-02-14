@@ -4,6 +4,7 @@ import * as actions from '../../store/actions/actions';
 import styles from './ProductsList.module.css';
 import Product from '../../components/Product/Product';
 import drinks from '../../components/Product/svgs';
+import ProductBought from '../../components/ProductBought/ProductBought';
 
 class ProductsList extends Component {
 
@@ -19,7 +20,7 @@ class ProductsList extends Component {
         <div className={styles.productsList}>
           {product}
         </div>
-        <div>ProductBought</div>
+        <ProductBought />
       </div>
     );
   }
