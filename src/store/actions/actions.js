@@ -12,3 +12,10 @@ export const selectProduct = (keyValue) => {
     payload: keyValue
   };
 };
+
+export const addCoin = (value) => {
+  return {
+    type: constants.ADD_COIN,
+    payload: value
+  };
+}

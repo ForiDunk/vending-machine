@@ -30,6 +30,8 @@ const reducer = (state = initialState, action) => {
       return updateObject(state, {products: products});
     case constants.SELECT_PRODUCT:
       return updateObject(state, {selectedProduct: handleSelectProduct(action.payload, state)});
+    case constants.ADD_COIN:
+      return updateObject(state, {balance: state.balance + action.payload});
     default: 
       return state;
   }
