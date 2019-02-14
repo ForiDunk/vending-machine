@@ -5,8 +5,8 @@ import SilverCoin from './silverCoin.svg';
 
 const addMoney = () => (
   <div className={styles.addMoney}>
-    <GoldCoin width={40} height={40} />
-    <SilverCoin width={40} height={40} />
+    <GoldCoin className={styles.addMoney__coin} />
+    <SilverCoin className={styles.addMoney__coin} />
   </div>
 );
 

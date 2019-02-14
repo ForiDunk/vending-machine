@@ -1,3 +1,28 @@
 .addMoney {
   color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.addMoney__coin {
+  width: 40px;
+  height: 40px;
+  /* mouse double-click 'select all' removal */
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.addMoney__coin:hover {
+  width: 45px;
+  height: 45px;
+}
+
+.addMoney__coin:active {
+  width: 35px;
+  height: 35px;
 }

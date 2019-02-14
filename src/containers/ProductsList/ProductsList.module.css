@@ -1,4 +1,6 @@
 .container {
+  height: 360px;
+  box-sizing: border-box;
   text-align: center;
   padding-bottom: 20px;
   background-image: 
