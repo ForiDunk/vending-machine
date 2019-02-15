@@ -8,7 +8,7 @@ const product = ({ product, image }) => {
       <Image width={50} height={50} />
       <p className={styles.product__code}>{product.code}</p>
       <p className={styles.product__price}>${product.price}</p>
-      <div className={styles.product__quantity}>X{product.quantity}</div>
+      <div className={styles.product__quantity}>x{product.quantity}</div>
     </div>
   );
 };
