@@ -5,33 +5,54 @@ import { updateObject } from '../utility';
 const initialState = {
   products: [],
   balance: 0,
-  selectedProduct: {}
-};
-
-const handleSelectProduct = (keyValue, state) => {
-  let selected = {};
-  state.products.map(product => {
-    if (product.code === keyValue && state.balance >= 0.5) {
-      selected = product;
-    }
-    if (keyValue === 'Clear') {
-      selected = {};
-    }
-    if (keyValue === 'Buy') {
-      selected = {};
-    }
-  });
-  return selected;
+  selectedProduct: {},
+  displayText: 'insert coin'
 };
 
 const reducer = (state = initialState, action) => {
+
   switch (action.type) {
+
     case constants.GET_PRODUCTS:
-      return updateObject(state, {products: products});
+      return updateObject(state, {
+        products: products
+      });
+
     case constants.SELECT_PRODUCT:
-      return updateObject(state, {selectedProduct: handleSelectProduct(action.payload, state)});
+      return updateObject(state, {
+        selectedProduct: state.products[action.payload - 1], 
+        displayText: state.products[action.payload - 1].name
+      });
+
     case constants.ADD_COIN:
-      return updateObject(state, {balance: state.balance + action.payload});
+      return updateObject(state, {
+        balance: state.balance + action.payload, 
+        displayText: 'select product'
+      });
+
+    case constants.BUY:
+      if (state.balance < state.selectedProduct.price) {
+        return updateObject(state, {
+          displayText: 'insufficient funds'
+        });
+      } else if (!state.selectedProduct.name) {
+        return updateObject(state, {
+          displayText: 'select a product first'
+        });
+      }
+          return updateObject(state, {
+            balance: state.balance - state.selectedProduct.price,
+            selectedProduct: {},
+            displayText: 'take product'
+          });
+
+    case constants.CASHOUT:
+      return updateObject(state, {
+        balance: 0,
+        selectedProduct: {},
+        displayText: 'insert coin'
+      });
+
     default: 
       return state;
   }

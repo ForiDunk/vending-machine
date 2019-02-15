@@ -4,6 +4,8 @@
   border-radius: 5px;
   text-align: center;
   margin: 15px auto;
+  height: 70px;
+  box-sizing: border-box;
 }
 
 .display__text,

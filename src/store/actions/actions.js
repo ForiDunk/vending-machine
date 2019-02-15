@@ -7,6 +7,18 @@ export const getProducts = () => {
 };
 
 export const selectProduct = (keyValue) => {
+  if (keyValue === 'Buy') {
+    return {
+      type: constants.BUY
+    };
+  }
+
+  if (keyValue === 'Cashout') {
+    return {
+      type: constants.CASHOUT
+    };
+  }
+
   return {
     type: constants.SELECT_PRODUCT,
     payload: keyValue

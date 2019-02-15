@@ -31,8 +31,8 @@
 
 .text {
   border-radius: 5px;
-  width: 45px;
   height: 20px;
+  width: 80px;
 }
 
 .key:hover {
