@@ -33,6 +33,7 @@ const reducer = (state = initialState, action) => {
     case constants.BUY:
       if (state.balance < state.selectedProduct.price) {
         return updateObject(state, {
+          selectedProduct: {},
           displayText: 'insufficient funds'
         });
       } else if (!state.selectedProduct.name) {
