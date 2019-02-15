@@ -40,11 +40,16 @@ const reducer = (state = initialState, action) => {
           displayText: 'select a product first'
         });
       }
-          return updateObject(state, {
-            balance: state.balance - state.selectedProduct.price,
-            selectedProduct: {},
-            displayText: 'take product'
-          });
+
+      const updatedProducts = state.products;
+      updatedProducts.map(product => product.code === state.selectedProduct.code ? product.quantity = state.selectedProduct.quantity - 1 : product);
+      return {
+        ...state,
+        balance: state.balance - state.selectedProduct.price,
+        products: [...updatedProducts],
+        selectedProduct: {},
+        displayText: 'take product'
+      };
 
     case constants.CASHOUT:
       return updateObject(state, {

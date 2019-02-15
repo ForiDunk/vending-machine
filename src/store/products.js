@@ -1,20 +1,20 @@
 const products = [
   {
     name: 'Cocktail',
-    price: 1,
-    quantity: 5,
+    price: 2,
+    quantity: 3,
     code: 1
   },
   {
     name: 'Coffee',
-    price: 1,
-    quantity: 5,
+    price: 0.5,
+    quantity: 7,
     code: 2
   },
   {
     name: 'E. Drink',
-    price: 1,
-    quantity: 5,
+    price: 0.5,
+    quantity: 4,
     code: 3
   },
   {
@@ -31,8 +31,8 @@ const products = [
   },
   {
     name: 'Juice',
-    price: 1,
-    quantity: 5,
+    price: 1.5,
+    quantity: 2,
     code: 6
   },
   {
@@ -43,14 +43,14 @@ const products = [
   },
   {
     name: 'Margarita',
-    price: 1,
-    quantity: 5,
+    price: 2.5,
+    quantity: 6,
     code: 8
   },
   {
     name: 'Milk',
-    price: 1,
-    quantity: 5,
+    price: 0.5,
+    quantity: 9,
     code: 9
   }
 ];
