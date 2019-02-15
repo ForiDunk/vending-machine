@@ -39,6 +39,10 @@ const reducer = (state = initialState, action) => {
         return updateObject(state, {
           displayText: 'select a product first'
         });
+      } else if (!state.selectedProduct.quantity) {
+        return updateObject(state, {
+          displayText: 'out of stock'
+        });
       }
 
       const updatedProducts = state.products;
