@@ -61,25 +61,15 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
 
     case constants.GET_PRODUCTS:
-      return updateObject(state, {
-        products: products
-      });
+      return updateObject(state, {products: products});
     case constants.SELECT_PRODUCT:
       return handleSelectProduct(state, action);
     case constants.ADD_COIN:
-      return updateObject(state, {
-        balance: state.balance + action.payload, 
-        displayText: 'select product'
-      });
+      return updateObject(state, {balance: state.balance + action.payload, displayText: 'select product'});
     case constants.BUY:
       return handleBuy(state);
     case constants.CASHOUT:
-      return updateObject(state, {
-        balance: 0,
-        selectedProduct: {},
-        displayText: 'insert coin'
-      });
-
+      return updateObject(state, {balance: 0, selectedProduct: {}, displayText: 'insert coin'});
     default: 
       return state;
   }
