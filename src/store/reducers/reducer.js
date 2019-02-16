@@ -11,7 +11,10 @@ const initialState = {
 };
 
 const handleSelectProduct = (state, action) => {
-  if (!state.products[action.payload - 1].quantity) {
+  if (state.boughtProduct.name) {
+    return state;
+
+  } else if (!state.products[action.payload - 1].quantity) {
     return updateObject(state, {
       displayText: 'out of stock'
     });
@@ -28,7 +31,9 @@ const handleSelectProduct = (state, action) => {
 };
 
 const handleBuy = (state) => {
-  if (state.balance < state.selectedProduct.price) {
+  if (state.boughtProduct.name) {
+    return state;
+  } else if (state.balance < state.selectedProduct.price) {
     return updateObject(state, {
       selectedProduct: {},
       displayText: 'insufficient funds'
@@ -39,7 +44,8 @@ const handleBuy = (state) => {
     });
   } else if (!state.selectedProduct.quantity) {
     return updateObject(state, {
-      displayText: 'out of stock'
+      displayText: 'out of stock',
+      selectedProduct: {}
     });
   } else if (state.boughtProduct.name) {
     return state;
