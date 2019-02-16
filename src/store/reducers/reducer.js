@@ -16,7 +16,8 @@ const handleSelectProduct = (state, action) => {
 
   } else if (!state.products[action.payload - 1].quantity) {
     return updateObject(state, {
-      displayText: 'out of stock'
+      displayText: 'out of stock',
+      selectedProduct: {}
     });
   }
 
@@ -29,6 +30,13 @@ const handleSelectProduct = (state, action) => {
     displayText: state.products[action.payload - 1].name
   });
 };
+
+const handleAddCoin = (state, action) => {
+  if (state.boughtProduct.name) {
+    return state;
+  }
+  return updateObject(state, {balance: state.balance + action.payload, displayText: 'select product'});
+}
 
 const handleBuy = (state) => {
   if (state.boughtProduct.name) {
@@ -61,7 +69,8 @@ const handleBuy = (state) => {
     displayText: 'take product',
     boughtProduct: state.selectedProduct
   };
-}
+};
+
 
 const handleCashout = (state) => {
   if(state.boughtProduct.name) {
@@ -82,7 +91,7 @@ const reducer = (state = initialState, action) => {
     case constants.SELECT_PRODUCT:
       return handleSelectProduct(state, action);
     case constants.ADD_COIN:
-      return updateObject(state, {balance: state.balance + action.payload, displayText: 'select product'});
+      return handleAddCoin(state, action);
     case constants.BUY:
       return handleBuy(state);
     case constants.CASHOUT:
