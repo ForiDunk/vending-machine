@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/actions';
-import styles from './ProductsList.module.css';
+import styles from './ProductsContainer.module.css';
 import Product from '../../components/Product/Product';
 import drinks from '../../components/Product/svgs';
 import ProductBought from '../../components/ProductBought/ProductBought';
 
-class ProductsList extends Component {
+class ProductsContainer extends Component {
 
   componentDidMount() {
     this.props.getProducts();
   }
   render() {
     const { products, selectedProduct } = this.props;
-    const product = products.map(product => (
+    const allProducts = products.map(product => (
       <Product 
         product={product} 
         key={product.code} 
@@ -23,9 +23,9 @@ class ProductsList extends Component {
     ));
 
     return (
-      <div className={styles.container}>
-        <div className={styles.productsList}>
-          {product}
+      <div className={styles.productsContainer}>
+        <div className={styles.productsContainer__productsList}>
+          {allProducts}
         </div>
         <ProductBought />
       </div>
@@ -46,4 +46,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);

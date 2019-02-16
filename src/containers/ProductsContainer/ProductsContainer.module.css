@@ -1,4 +1,4 @@
-.container {
+.productsContainer {
   height: 360px;
   box-sizing: border-box;
   text-align: center;
@@ -10,7 +10,7 @@
     linear-gradient(180deg, hsl(0,0%,78%)  0%,  hsl(0,0%,90%) 47%, hsl(0,0%,78%) 53%, hsl(0,0%,70%)100%);
 }
 
-.productsList {
+.productsContainer__productsList {
   background-color: darkorchid;
   margin: 13px;
   display: grid;
@@ -20,16 +20,12 @@
   border-radius: 5px;
 }
 
-.selectedProduct {
-  background-color: greenyellow;
-}
-
 @media (max-height: 400px) {
-  .container {
+  .productsContainer {
     height: 100%;
   }
 
-  .productsList {
+  .productsContainer__productsList {
     margin-top: 3px;
   }
 }
