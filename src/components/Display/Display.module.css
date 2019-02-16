@@ -17,3 +17,9 @@
 .display__text {
   font-weight: bold;
 }
+
+@media (max-height: 400px) {
+  .display {
+    margin-top: 0;
+  }
+}

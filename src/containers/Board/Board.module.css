@@ -10,3 +10,9 @@
   height: 360px;
   box-sizing: border-box;
 }
+
+@media (max-height: 400px) {
+  .board {
+    height: 100%;
+  }
+}

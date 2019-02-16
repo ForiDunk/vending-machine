@@ -12,7 +12,7 @@
 
 .productsList {
   background-color: darkorchid;
-  margin: 15px;
+  margin: 13px;
   display: grid;
   grid-gap: 2px;
   padding: 5px;
@@ -22,4 +22,14 @@
 
 .selectedProduct {
   background-color: greenyellow;
+}
+
+@media (max-height: 400px) {
+  .container {
+    height: 100%;
+  }
+
+  .productsList {
+    margin-top: 3px;
+  }
 }
