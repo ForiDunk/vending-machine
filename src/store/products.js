@@ -2,7 +2,7 @@ const products = [
   {
     name: 'Cocktail',
     price: 2,
-    quantity: 3,
+    quantity: 2,
     code: 1
   },
   {
@@ -32,7 +32,7 @@ const products = [
   {
     name: 'Juice',
     price: 1.5,
-    quantity: 2,
+    quantity: 0,
     code: 6
   },
   {
