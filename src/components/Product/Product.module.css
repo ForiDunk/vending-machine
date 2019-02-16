@@ -11,6 +11,7 @@
 .product__out {
   background-color: grey;
   opacity: 0.7;
+  color: white;
 }
 
 .product__code {
@@ -39,7 +40,7 @@
   font-family: monospace;
   font-weight: bold;
   font-size: 16px;
-  color: white;
+  color:black;
   text-shadow: 0 0 2px white;
 }
 
