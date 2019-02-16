@@ -5,6 +5,15 @@
   position: relative;
 }
 
+.product__selected {
+  background-color: greenyellow;
+}
+
+.product__out {
+  background-color: gray;
+  opacity: 0.5;
+}
+
 .product__code {
   margin: 0;
   display: inline-block;

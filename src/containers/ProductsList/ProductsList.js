@@ -12,8 +12,15 @@ class ProductsList extends Component {
     this.props.getProducts();
   }
   render() {
-    const { products } = this.props;
-    const product = products.map(product => <Product product={product} key={product.code} image={drinks[product.code]} />);
+    const { products, selectedProduct } = this.props;
+    const product = products.map(product => (
+      <Product 
+        product={product} 
+        key={product.code} 
+        image={drinks[product.code]}
+        isSelected={product.code === selectedProduct.code}
+      />
+    ));
 
     return (
       <div className={styles.container}>
@@ -28,7 +35,8 @@ class ProductsList extends Component {
 
 const mapStateToProps = state => {
   return {
-    products: state.products
+    products: state.products,
+    selectedProduct: state.selectedProduct
   }
 }
 
