@@ -14,15 +14,15 @@
   -moz-user-select: none; /* mozilla browsers */
   -khtml-user-select: none; /* webkit (konqueror) browsers */
   -ms-user-select: none; /* IE10+ */
-  transition: all 0.3s;
+  transition: all 0.2s;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .addMoney__coin:hover {
-  width: 45px;
-  height: 45px;
+  box-shadow: 0 0 3px 3px greenyellow;
 }
 
 .addMoney__coin:active {
-  width: 35px;
-  height: 35px;
+  box-shadow: 0 0 3px 1px greenyellow;
 }

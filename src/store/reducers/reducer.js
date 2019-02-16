@@ -6,7 +6,8 @@ const initialState = {
   products: [],
   balance: 0,
   selectedProduct: {},
-  displayText: 'insert coin'
+  displayText: 'insert coin',
+  boughtProduct: {}
 };
 
 const handleSelectProduct = (state, action) => {
@@ -40,7 +41,7 @@ const handleBuy = (state) => {
     return updateObject(state, {
       displayText: 'out of stock'
     });
-  } else if (state.displayText === 'take product') {
+  } else if (state.boughtProduct.name) {
     return state;
   }
 
@@ -51,7 +52,8 @@ const handleBuy = (state) => {
     balance: state.balance - state.selectedProduct.price,
     products: [...updatedProducts],
     selectedProduct: {},
-    displayText: 'take product'
+    displayText: 'take product',
+    boughtProduct: state.selectedProduct
   };
 
 }
@@ -70,6 +72,8 @@ const reducer = (state = initialState, action) => {
       return handleBuy(state);
     case constants.CASHOUT:
       return updateObject(state, {balance: 0, selectedProduct: {}, displayText: 'insert coin'});
+      case constants.TAKE_PRODUCT:
+      return updateObject(state, {boughtProduct: {}, displayText: 'insert coin'});
     default: 
       return state;
   }

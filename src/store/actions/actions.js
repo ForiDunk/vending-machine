@@ -31,3 +31,9 @@ export const addCoin = (value) => {
     payload: value
   };
 }
+
+export const takeProduct = () => {
+  return {
+    type: constants.TAKE_PRODUCT
+  };
+}

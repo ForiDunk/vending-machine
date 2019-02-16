@@ -3,3 +3,4 @@ export const SELECT_PRODUCT = 'SELECT_PRODUCT';
 export const ADD_COIN = 'ADD_COIN';
 export const BUY = 'BUY';
 export const CASHOUT = 'CASHOUT';
+export const TAKE_PRODUCT = 'TAKE_PRODUCT';
