@@ -39,6 +39,7 @@
   font-family: monospace;
   font-weight: bold;
   font-size: 16px;
+  text-shadow: 0 0 7px white;
 }
 
 @media (max-width: 400px) {
