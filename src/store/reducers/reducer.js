@@ -55,13 +55,22 @@ const handleBuy = (state) => {
     displayText: 'take product',
     boughtProduct: state.selectedProduct
   };
+}
 
+const handleCashout = (state) => {
+  if(state.boughtProduct.name) {
+    return state;
+  }
+  return updateObject(state, {balance: 0, selectedProduct: {}, displayText: 'insert coin'});
+};
+
+const handleTakeProduct = (state) => {
+  let displayText = state.balance >= 0.5 ? 'select product' : 'insert coin';
+  return updateObject(state, {boughtProduct: {}, displayText});
 }
 
 const reducer = (state = initialState, action) => {
-
   switch (action.type) {
-
     case constants.GET_PRODUCTS:
       return updateObject(state, {products: products});
     case constants.SELECT_PRODUCT:
@@ -71,9 +80,9 @@ const reducer = (state = initialState, action) => {
     case constants.BUY:
       return handleBuy(state);
     case constants.CASHOUT:
-      return updateObject(state, {balance: 0, selectedProduct: {}, displayText: 'insert coin'});
-      case constants.TAKE_PRODUCT:
-      return updateObject(state, {boughtProduct: {}, displayText: 'insert coin'});
+      return handleCashout(state);
+    case constants.TAKE_PRODUCT:
+      return handleTakeProduct(state);
     default: 
       return state;
   }
