@@ -80,8 +80,11 @@ const handleCashout = (state) => {
 };
 
 const handleTakeProduct = (state) => {
-  let displayText = state.balance >= 0.5 ? 'select product' : 'insert coin';
-  return updateObject(state, {boughtProduct: {}, displayText});
+  if (state.boughtProduct.name){
+    let displayText = state.balance >= 0.5 ? 'select product' : 'insert coin';
+    return updateObject(state, {boughtProduct: {}, displayText});
+  }
+  return state;
 }
 
 const reducer = (state = initialState, action) => {
